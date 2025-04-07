@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Series TV</title>
@@ -8,21 +8,41 @@
 </head>
 <body>
 <div class="container mt-4">
-    <h1 class="text-center">Listado de Series</h1>
-    <table class="table table-striped" id="seriesTable">
-        <thead class="thead-dark">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Channel</th>
-            <th>Seasons</th>
-        </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    <p id="average" class="font-weight-bold"></p>
+    <div class="row">
+
+        <!-- Tabla de series -->
+        <div class="col-md-8">
+            <h1 class="text-center">Listado de Series</h1>
+            <table class="table table-striped" id="seriesTable">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Channel</th>
+                    <th>Seasons</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p id="average" class="font-weight-bold"></p>
+        </div>
+
+        <!-- Card de detalles -->
+        <div class="col-md-4">
+            <div id="cardDetail" class="card d-none">
+                <img class="card-img-top" id="cardImage" src="" alt="Series image">
+                <div class="card-body">
+                    <h5 class="card-title" id="cardTitle"></h5>
+                    <p class="card-text" id="cardDescription"></p>
+                    <a href="#" id="cardLink" class="btn btn-primary" target="_blank">More info</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<script type="module" src="dist/app.js"></script>
+<!-- Scripts -->
+<script type="module" src="./dist/app.js"></script>
 </body>
 </html>
